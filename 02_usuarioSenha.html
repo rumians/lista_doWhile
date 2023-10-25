@@ -7,9 +7,14 @@
 
     //Entrada
 
-
+    let usuario = prompt("Qual o seu usuario?").toLowerCase();
+    let senha = prompt("Qual a sua senha?").toLowerCase();
     //Processamento
-
+    while (usuario == senha) {
+        alert("Erro")
+        usuario = prompt("Qual o seu usuario?").toLowerCase();
+        senha = prompt("Qual a sua senha?").toLowerCase();
+    }
 
     //Saída
 
