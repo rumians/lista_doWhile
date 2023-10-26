@@ -25,11 +25,14 @@
     }
     let sexo = prompt("Qual é o seu sexo?(M / F)").toLowerCase();
     while (sexo != "f" && sexo != "m") {
-        
+        sexo = prompt("Qual é o seu sexo?(M / F)").toLowerCase();
     }
-    let estadocivil = prompt("Qual é o seu estado civil?").toLowerCase();
-    //Processamento
+    let estadocivil = prompt("Qual é o seu estado civil?(S-solteiro(a), C-casado(a), V-viuvo(a), D-divorciado(a))").toLowerCase();
+    while (estadocivil != "s" && estadocivil != "c" && estadocivil != "v" && estadocivil != "d") {
+        estadocivil = prompt("Qual é o seu estado civil?(S-solteiro(a), C-casado(a), V-viuvo(a), D-divorciado(a))").toLowerCase();
+    }
 
+    //Processamento
 
     //Saída
 

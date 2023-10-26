@@ -20,13 +20,28 @@
     */
 
     //Entrada
-
-
+    let CandidatoJoãozinho = 0;
+    let CandidatoMariazinha = 0;
+    let nulo = 0;
+    let branco = 0;
     //Processamento
-
-
+    do {
+        const votaçao = Number(prompt("Qual candidato vai votar?(Joaozinho-1, Mariazinha-2, Nulo-3, Branco-4.)"))
+        if (votaçao == 1) {
+            CandidatoJoãozinho += 1
+        } else if (votaçao == 2) {
+            CandidatoMariazinha += 1
+        } else if (votaçao == 3) {
+            nulo += 1
+        } else if (votaçao == 4) {
+            branco += 1
+        }
+    } while (votaçao != 0);
+    if (CandidatoJoãozinho == CandidatoMariazinha && CandidatoMariazinha == nulo && nulo == branco) {
+        alert("Ocorreu um empate")
+    } else if (CandidatoJoãozinho > CandidatoMariazinha) {
+        alert(`O candidato Joaozinho ganhou com ${CandidatoJoãozinho}votos(${2}%)`)
+    }
     //Saída
 
 </script>
-
-
