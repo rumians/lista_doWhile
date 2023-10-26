@@ -24,24 +24,30 @@
     let CandidatoMariazinha = 0;
     let nulo = 0;
     let branco = 0;
+    let votaçao;
     //Processamento
     do {
-        const votaçao = Number(prompt("Qual candidato vai votar?(Joaozinho-1, Mariazinha-2, Nulo-3, Branco-4.)"))
+        votaçao = Number(prompt("Qual candidato vai votar?(Joaozinho-1, Mariazinha-2, Nulo-3, Branco-4.)"));
         if (votaçao == 1) {
-            CandidatoJoãozinho += 1
+            CandidatoJoãozinho += 1;
         } else if (votaçao == 2) {
-            CandidatoMariazinha += 1
+            CandidatoMariazinha += 1;
         } else if (votaçao == 3) {
             nulo += 1
         } else if (votaçao == 4) {
-            branco += 1
+            branco += 1;
         }
     } while (votaçao != 0);
+    let votostotais = CandidatoJoãozinho + CandidatoMariazinha + nulo + branco;
     if (CandidatoJoãozinho == CandidatoMariazinha && CandidatoMariazinha == nulo && nulo == branco) {
-        alert("Ocorreu um empate")
+        alert("Ocorreu um empate");
     } else if (CandidatoJoãozinho > CandidatoMariazinha) {
-        alert(`O candidato Joaozinho ganhou com ${CandidatoJoãozinho}votos(${2}%)`)
+        alert(`O candidato Joaozinho ganhou com ${CandidatoJoãozinho} votos e a candidata Mariazinha ficou com ${CandidatoMariazinha} votos ,(${(nulo / votostotais) * 100}%)foram de votos nulos e (${(branco / votostotais) * 100}%)de votos vots brancos`);
+    } else if (CandidatoJoãozinho < CandidatoMariazinha) {
+        alert(`A candidata Mariazinha ganhou com ${CandidatoMariazinha} votos e o candidato Joaozinho ficou com ${CandidatoJoãozinho} votos ,(${(nulo / votostotais) * 100}%)foram de votos nulos e (${(branco / votostotais) * 100}%)de votos vots brancos`);
     }
     //Saída
-
+     if (CandidatoJoãozinho < CandidatoMariazinha) {
+        alert(`A candidata Mariazinha ganhou com ${CandidatoMariazinha} votos e o candidato Joaozinho ficou com ${CandidatoJoãozinho} votos ,(${(nulo / votostotais) * 100}%)foram de votos nulos e (${(branco / votostotais) * 100}%)de votos vots brancos`);
+    }
 </script>
