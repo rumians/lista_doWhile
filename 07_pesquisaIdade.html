@@ -13,11 +13,30 @@
     */
 
     //Entrada
-
-
+    let idade;
+    let idadelista = [];
+    let salario;
+    let salarioslista = [];
+    let sexo;
+    let sexolista = [];
+    let totalF = 0;
     //Processamento
 
+    do {
+        idade = Number(prompt("Qual a sua idade?"));
+        if(idade < 0)break
+        idadelista.push(idade);
+        salario = Number(prompt("Qual o seu salario ?"));
+        salarioslista.push(salario);
+        sexo = prompt("Qual o seu sexo?(F / M)").toLowerCase();
+        sexolista.push(sexo)
+        if (sexo == "f") {
+            totalF++
+        }
+    } while (true);
 
     //Saída
+    alert(`
+    A média dos salários é: ${salarioslista.reduce((soma, valor) => soma + valor, 0) / salarioslista.length}; A maior idade foi: ${Math.max(...idadelista)} e a menor idade: ${Math.min(...idadelista)};O total de mulheres na região é ${totalF};E a pessoa que possui o menor salário é do sexo ${sexolista[salarioslista.indexOf(Math.min(...salarioslista))]} e a idade: ${idadelista[salarioslista.indexOf(Math.min(...salarioslista))]};`)
 
 </script>

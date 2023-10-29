@@ -39,15 +39,14 @@
         }
     } while (votaçao != 0);
     let votostotais = CandidatoJoãozinho + CandidatoMariazinha + nulo + branco;
-    if (CandidatoJoãozinho == CandidatoMariazinha && CandidatoMariazinha == nulo && nulo == branco) {
+    if (CandidatoJoãozinho == CandidatoMariazinha) {
         alert("Ocorreu um empate");
     } else if (CandidatoJoãozinho > CandidatoMariazinha) {
-        alert(`O candidato Joaozinho ganhou com ${CandidatoJoãozinho} votos e a candidata Mariazinha ficou com ${CandidatoMariazinha} votos ,(${(nulo / votostotais) * 100}%)foram de votos nulos e (${(branco / votostotais) * 100}%)de votos vots brancos`);
+        alert(`O candidato Joaozinho ganhou com ${CandidatoJoãozinho} votos e a candidata Mariazinha ficou com ${CandidatoMariazinha} votos ,(${((nulo / votostotais) * 100).toFixed(2)}%)foram de votos nulos e (${((branco / votostotais) * 100).toFixed(2)}%)de votos vots brancos`);
     } else if (CandidatoJoãozinho < CandidatoMariazinha) {
-        alert(`A candidata Mariazinha ganhou com ${CandidatoMariazinha} votos e o candidato Joaozinho ficou com ${CandidatoJoãozinho} votos ,(${(nulo / votostotais) * 100}%)foram de votos nulos e (${(branco / votostotais) * 100}%)de votos vots brancos`);
+        alert(`A candidata Mariazinha ganhou com ${CandidatoMariazinha} votos e o candidato Joaozinho ficou com ${CandidatoJoãozinho} votos ,(${((nulo / votostotais) * 100).toFixed(2)}%)foram de votos nulos e (${((branco / votostotais) * 100).toFixed(2)}%)de votos vots brancos`);
     }
-    //Saída
-     if (CandidatoJoãozinho < CandidatoMariazinha) {
-        alert(`A candidata Mariazinha ganhou com ${CandidatoMariazinha} votos e o candidato Joaozinho ficou com ${CandidatoJoãozinho} votos ,(${(nulo / votostotais) * 100}%)foram de votos nulos e (${(branco / votostotais) * 100}%)de votos vots brancos`);
+    if (CandidatoJoãozinho < CandidatoMariazinha) {
+        alert(`A candidata Mariazinha ganhou com ${CandidatoMariazinha} votos e o candidato Joaozinho ficou com ${CandidatoJoãozinho} votos ,(${((nulo / votostotais) * 100).toFixed(2)}%)foram de votos nulos e (${((branco / votostotais) * 100).toFixed(2)}%)de votos vots brancos`);
     }
 </script>
